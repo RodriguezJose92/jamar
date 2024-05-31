@@ -3,7 +3,7 @@
 class MudiExperience{
 
     constructor(){
-        this.color              = "#e53733";
+        this.color              = "#3f4b59";
         this.dataSever          = null;
         this.skuNumber          = null;
         this.fatherContainer    = null;
@@ -71,8 +71,9 @@ class MudiExperience{
             <svg id="img3DBtn" class="btnMudi3D" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 360">
                 <defs>
                     <style>
+                        
                         .cls-1{
-                            fill:${this.color};
+                            fill:#ffffff;
                             opacity:.6;
                         }
                         
@@ -80,11 +81,12 @@ class MudiExperience{
                             stroke-width:0px;
                         }
                         .cls-2{
-                            fill:#f4f4f4;
+                            fill:#3f4b59;
                         }
                         .cls-3{
-                            fill:${this.color};
+                            fill:#fff;
                         }
+                    
                     </style>
                 </defs>
                 <circle class="cls-2" cx="170" cy="178.45" r="150.5"/>
