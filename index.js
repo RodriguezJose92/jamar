@@ -330,5 +330,11 @@ class MudiExperience{
 };
 
 const mudiExperience = new MudiExperience();
-setTimeout(()=>{mudiExperience.experienceOn( document.body.querySelector('.txt-sku').innerHTML.replace('Código ','').trim() , document.body.querySelector('.carousel-inner').parentNode )},2000)
+setTimeout(()=>{
+    if(window.location.href.includes('https://www.jamar.com.pa/')){
+        mudiExperience.experienceOn( 7028515 , document.body.querySelector('.product-gallery--viewer').parentNode )
+    }else {
+        mudiExperience.experienceOn( document.body.querySelector('.txt-sku').innerHTML.replace('Código ','').trim() , document.body.querySelector('.carousel-inner').parentNode )
+    }
+},2000)
 
