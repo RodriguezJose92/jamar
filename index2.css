@@ -263,4 +263,16 @@
     color: transparent;
     display:none
 }
+
+.btnMudi3D {
+    width: 80px;
+    height: 80px;
+    position: relative;
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+    filter: drop-shadow(0px 0px 5px rgba(10, 10, 10, 0.196));
+
+}
+
+
 }
