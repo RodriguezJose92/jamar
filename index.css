@@ -252,7 +252,15 @@
         scale: 0.9;
     }
 
- .tooltipMudi::afther{
-    display:none;
-    }
+.tooltipMudi::after {
+    content: "_";
+    position: absolute;
+    bottom: -15%;
+    right: 10%;
+    width: 10px;
+    border-bottom-right-radius: 50px;
+    background-color: #828282;
+    color: transparent;
+    display:none
+}
 }
