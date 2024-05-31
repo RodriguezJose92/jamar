@@ -76,8 +76,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 80%;
-    height: 90%;
+    width: 90%;
+    height: 80%;
     border-radius: 10px;
     overflow: hidden;
     filter: drop-shadow(3px 5px 10px rgba(10, 10, 10, 0.532));
