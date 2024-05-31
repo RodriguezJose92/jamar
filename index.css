@@ -236,7 +236,7 @@
     }
 }
 
-@media screen (max-width:500px){
+@media screen and (max-width:500px){
     .tooltipMudi{
         background-color: #828282;
         color: white;
