@@ -330,5 +330,5 @@ class MudiExperience{
 };
 
 const mudiExperience = new MudiExperience();
-setTimeout(()=>{mudiExperience.experienceOn( document.body.querySelector('.txt-sku').innerHTML.replace('Código ','').trim() , document.body.querySelector('.carousel-inner'))},2000)
+setTimeout(()=>{mudiExperience.experienceOn( document.body.querySelector('.txt-sku').innerHTML.replace('Código ','').trim() , document.body.querySelector('.carousel-inner').parentNode )},2000)
 
