@@ -275,8 +275,8 @@ class MudiExperience{
             event: `Evento de interaccion ${eventName}`,
             valorMudi: 1,
             sku: this.skuNumber,
-            category:document.body.querySelector('.breadcrumb li:nth-of-type(2) a').innerHTML || 'null',
-            subCategory: document.body.querySelector('.breadcrumb li:nth-of-type(3) a').innerHTML || ' null',
+            // category:document.body.querySelector('.breadcrumb li:nth-of-type(2) a').innerHTML || 'null',
+            // subCategory: document.body.querySelector('.breadcrumb li:nth-of-type(3) a').innerHTML || ' null',
             sistemaOperativo: OSdevice
         })
     };
@@ -293,8 +293,8 @@ class MudiExperience{
             event: `visualizacion_botones`,
             valorMudi: 1,
             sku: this.skuNumber,
-            category:document.body.querySelector('.breadcrumb li:nth-of-type(2) a').innerHTML || 'null',
-            subCategory: document.body.querySelector('.breadcrumb li:nth-of-type(3) a').innerHTML || ' null',
+            // category:document.body.querySelector('.breadcrumb li:nth-of-type(2) a').innerHTML || 'null',
+            // subCategory: document.body.querySelector('.breadcrumb li:nth-of-type(3) a').innerHTML || ' null',
             sistemaOperativo: OSdevice
         })
     };
