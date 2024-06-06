@@ -361,6 +361,7 @@ function verifySkuNumber(){
     verifySkuNumberCounter++;
     requestAnimationFrame(verifySkuNumber);
 };
+verifySkuNumber();
 
 const products3D = [
     '7022965'
