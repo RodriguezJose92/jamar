@@ -401,9 +401,13 @@ function addButonPLP(){
 
         for( let i = 0; i < listCards.length ; i++ ){
             if( products3D.indexOf(listCards[i].children[0].href.replace('https://www.jamar.com/products/','')) !== -1){
+            
+                console.log(listCards[i].children[0])
                 listCards[i].children[0].appendChild(iconMudi)
+                
             }
         }
+        console.log(listCards.length)
         return;
 
     }
