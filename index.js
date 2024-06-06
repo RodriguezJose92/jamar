@@ -388,26 +388,20 @@ function addButonPLP(){
         return;
     };
 
-    const 
-    iconMudi = document.createElement('IMG');
-    iconMudi.setAttribute('style',`position: absolute; width: 60px; bottom: -25px; right: 2%; background-color: white;
-    border-radius: 60%; padding-left: 2px;filter: drop-shadow(0px 0px 6px #00000015);`)
-    
-    iconMudi.src="https://cdn.jsdelivr.net/gh/RodriguezJose92/jamar@latest/icon3D.svg";
-
     const listCards = document.body.querySelectorAll('.card-views');
 
     if(listCards.length > 0){
 
         for( let i = 0; i < listCards.length ; i++ ){
-            if( products3D.indexOf(listCards[i].children[0].href.replace('https://www.jamar.com/products/','')) !== -1){
+            if( products3D.includes( listCards[i].children[0].href.replace('https://www.jamar.com/products/','') ) ) {
             
-                console.log(listCards[i].children[0])
-                listCards[i].children[0].appendChild(iconMudi)
+                listCards[i].children[0].style.position='relative'
+                listCards[i].children[0].innerHTML += `<img style="position: absolute; width: 60px; bottom: -25px; right: 2%; background-color: white;
+                border-radius: 60%; padding-left: 2px;filter: drop-shadow(0px 0px 6px #00000015)" src="https://cdn.jsdelivr.net/gh/RodriguezJose92/jamar@latest/icon3D.svg">`
                 
             }
-        }
-        console.log(listCards.length)
+        };
+
         return;
 
     }
