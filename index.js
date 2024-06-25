@@ -439,7 +439,10 @@ function addButtonPLPPanama(){
 
 };
 
-window.location.href.includes('jamar.com.pa') ? addButtonPLPPanama() : addButonPLP();
+setTimeout(()=>{
+    window.location.href.includes('jamar.com.pa') ? addButtonPLPPanama() : addButonPLP();
+},1500)
+
 
 
 
