@@ -377,10 +377,13 @@ const products3D = [
     '7022965',
     '7024501',
     '7024260',
-    '7024546'
+    '7024546',
+    '7029249'
 ];
+
 let verifyCardsCounter = 0;
 
+/** Verificación de colombia */
 function addButonPLP(){
 
     if(verifyCardsCounter > 5000){
@@ -394,23 +397,49 @@ function addButonPLP(){
 
         for( let i = 0; i < listCards.length ; i++ ){
             if( products3D.includes( listCards[i].children[0].href.replace('https://www.jamar.com/products/','') ) ) {
-            
                 listCards[i].children[0].style.position='relative'
                 listCards[i].children[0].innerHTML += `<img style="position: absolute; width: 60px; bottom: -25px; right: 2%; background-color: white;
-                border-radius: 60%; padding-left: 2px;filter: drop-shadow(0px 0px 6px #00000015)" src="https://cdn.jsdelivr.net/gh/RodriguezJose92/jamar@latest/icon3D.svg">`
-                
-            }
+                border-radius: 60%; padding-left: 2px;filter: drop-shadow(0px 0px 6px #00000015)" src="https://cdn.jsdelivr.net/gh/RodriguezJose92/jamar@latest/icon3D.svg">`; 
+            };
         };
 
         return;
 
-    }
+    };
 
     verifyCardsCounter ++;
     requestAnimationFrame(addButonPLP);
 
 };
-addButonPLP();
+
+/** Verificación de Panamá */
+function addButtonPLPPanama(){
+
+    if(verifyCardsCounter > 5000){
+        console.log('no se encontraron card de productos');
+        return;
+    };
+
+    const 
+    listCards = document.body.querySelectorAll('.productitem--sale');
+
+    if (listCards.length == 0 ) { 
+        verifyCardsCounter ++;
+        requestAnimationFrame(addButtonPLPPanama);
+        return;
+    };
+
+    for( let i = 0 ; i < listCards.length; i ++){
+        if( products3D.includes( listCards[i].getAttribute('data-ee-product-sku') ) ){
+            document.body.querySelectorAll('.productitem--info')[i].style.position = 'relative';
+            document.body.querySelectorAll('.productitem--info')[i].innerHTML += `<img style="position: absolute; width: 50px; top: -25px; right: 1.5%; background-color: white;
+            border-radius: 60%; padding-left: 2px;filter: drop-shadow(0px 0px 6px #00000015)" src="https://cdn.jsdelivr.net/gh/RodriguezJose92/jamar@latest/icon3D.svg">`
+        };
+    };
+
+};
+
+window.location.href.includes('jamar.com.pa') ? addButtonPLPPanama() : addButonPLP();
 
 
 
