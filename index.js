@@ -484,18 +484,18 @@ function createEventsColombiaWA(){
     links.push(document.body.querySelector('.container-plus-info-whatsapp').children[1].href + `/?active3D=true`);
     links.push(document.body.querySelector('[alt="Icono compartir por Whatsapp"]').parentNode.href + `/active3D=true`);
     
-    document.body.querySelector('.product-cta-whatsapp').href = links[0]
-    document.body.querySelector('[alt="Icono compartir por Whatsapp"]').parentNode.href=links[1]
+    document.body.querySelector('.container-plus-info-whatsapp').children[1].href = links[0];
+    document.body.querySelector('[alt="Icono compartir por Whatsapp"]').parentNode.href=links[1];
 };
 
 /** Función para seteear links de boton WAZAP Panamá  */
 function createEventsPanalaWA(){
 
-    links.push(document.body.querySelector('.product-cta-whatsapp').href+`/?active3D=true`)
-    links.push(document.body.querySelector('[alt="Icono compartir por Whatsapp"]').parentNode.href+`/active3D=true`)
+    links.push(document.body.querySelector('.product-cta-whatsapp').href+`/?active3D=true`);
+    links.push(document.body.querySelector('[alt="Icono compartir por Whatsapp"]').parentNode.href+`/active3D=true`);
 
-    document.body.querySelector('.product-cta-whatsapp').href = links[0]
-    document.body.querySelector('[alt="Icono compartir por Whatsapp"]').parentNode.href=links[1]
+    document.body.querySelector('.product-cta-whatsapp').href = links[0];
+    document.body.querySelector('[alt="Icono compartir por Whatsapp"]').parentNode.href=links[1];
 }
 
 setTimeout(()=> linkGeneral.includes('jamar.com.pa') ? addButtonPLPPanama() : addButonPLP() ,1500)
