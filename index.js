@@ -321,10 +321,10 @@ class MudiExperience{
         } else {
 
             if (
-                document.body.querySelector('.product-cta-whatsapp') && 
+                document.body.querySelector('.container-plus-info-whatsapp') && 
                 document.body.querySelector('[alt="Icono compartir por Whatsapp"]')
             ) {
-                document.body.querySelector('.product-cta-whatsapp').addEventListener('click', ()=> this.sendEventInteraction('whatsApp_abajo')),
+                document.body.querySelector('.container-plus-info-whatsapp').addEventListener('click', ()=> this.sendEventInteraction('whatsApp_abajo')),
                 document.body.querySelector('[alt="Icono compartir por Whatsapp"]').parentNode.addEventListener('click', ()=>this.sendEventInteraction('whatsApp compartir'))
                 return
             }
