@@ -304,14 +304,34 @@ class MudiExperience{
 
     /** Seteamos el evento del boton de WAZAP  */
     seterEventWAZAP(){
-        linkGeneral.includes('jamar.com.pa') 
-        ? (
-            document.body.querySelector('.product-cta-whatsapp').addEventListener('click', ()=> this.sendEventInteraction('whatsApp_abajo')),
-            document.body.querySelector('[alt="Icono compartir por Whatsapp"]').parentNode.addEventListener('click', ()=>this.sendEventInteraction('whatsApp compartir'))
-        ) : (
-            document.body.querySelector('.product-cta-whatsapp').addEventListener('click', ()=> this.sendEventInteraction('whatsApp_abajo')),
-            document.body.querySelector('[alt="Icono compartir por Whatsapp"]').parentNode.addEventListener('click', ()=>this.sendEventInteraction('whatsApp compartir'))
-        )
+
+        if( linkGeneral.includes('jamar.com.pa') ){
+
+            if(
+                document.body.querySelector('.product-cta-whatsapp') && 
+                document.body.querySelector('[alt="Icono compartir por Whatsapp"]')
+            ){
+                document.body.querySelector('.product-cta-whatsapp').addEventListener('click', ()=> this.sendEventInteraction('whatsApp_abajo'));
+                document.body.querySelector('[alt="Icono compartir por Whatsapp"]').parentNode.addEventListener('click', ()=>this.sendEventInteraction('whatsApp compartir'));
+                return;
+            }
+
+            requestAnimationFrame(this.seterEventWAZAP.bind(this))
+
+        } else {
+
+            if (
+                document.body.querySelector('.product-cta-whatsapp') && 
+                document.body.querySelector('[alt="Icono compartir por Whatsapp"]')
+            ) {
+                document.body.querySelector('.product-cta-whatsapp').addEventListener('click', ()=> this.sendEventInteraction('whatsApp_abajo')),
+                document.body.querySelector('[alt="Icono compartir por Whatsapp"]').parentNode.addEventListener('click', ()=>this.sendEventInteraction('whatsApp compartir'))
+                return
+            }
+
+            requestAnimationFrame(this.seterEventWAZAP.bind(this))
+        };
+
     };
 
     /** verifyExperience  ✔️ */
