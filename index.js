@@ -1,3 +1,4 @@
+const linkGeneral =  window.location.href;
 
 /** Mudi Experience */
 class MudiExperience{
@@ -102,6 +103,8 @@ class MudiExperience{
             this.createModal();
             /** GTM */
             this.sendEventInteraction('3D');
+            /** seteamos el link akl botón de WAZAP */
+            linkGeneral.includes('jamar.com.pa') ? createEventsPanalaWA() : createEventsColombiaWA();
         });
 
         fragment.appendChild(containerBtns)
@@ -439,9 +442,30 @@ function addButtonPLPPanama(){
 
 };
 
-setTimeout(()=>{
-    window.location.href.includes('jamar.com.pa') ? addButtonPLPPanama() : addButonPLP();
-},1500)
+/** Función para seteear links de boton WAZAP colombia  */
+function createEventsColombiaWA(){
+    let links = [
+        document.body.querySelector('.container-plus-info-whatsapp').children[1].href+`/?active3D=true`,
+        document.body.querySelector('[alt="Icono compartir por Whatsapp"]').parentNode.href+`/active3D=true`
+    ]
+
+    document.body.querySelector('.product-cta-whatsapp').href = links[0]
+    document.body.querySelector('[alt="Icono compartir por Whatsapp"]').parentNode.href=links[1]
+};
+
+/** Función para seteear links de boton WAZAP Panamá  */
+function createEventsPanalaWA(){
+
+    let links = [
+        document.body.querySelector('.product-cta-whatsapp').href+`/?active3D=true`,
+        document.body.querySelector('[alt="Icono compartir por Whatsapp"]').parentNode.href+`/active3D=true`
+    ]
+
+    document.body.querySelector('.product-cta-whatsapp').href = links[0]
+    document.body.querySelector('[alt="Icono compartir por Whatsapp"]').parentNode.href=links[1]
+}
+
+setTimeout(()=> linkGeneral.includes('jamar.com.pa') ? addButtonPLPPanama() : addButonPLP() ,1500)
 
 
 
